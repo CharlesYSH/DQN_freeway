@@ -9,6 +9,14 @@ There are three critical components:
 
 ![DQN](./image/dqn.png)
 
+### Experiment result
+
+* Train DQN with ε-greedy policy (current policy) for exploration
+* Evaluate DQN policy (final policy) every 10 episodes
+
+![train_curve](./image/train_sample.png)
+![test_curve](./image/test_sample.png)
+![reference_score](./image/reference_score.png)
 
 ### References
 

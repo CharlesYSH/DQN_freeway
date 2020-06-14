@@ -69,7 +69,7 @@ def train():
             if done:
                 train_info_str = "Episode: %6d, interaction_steps: %6d, reward: %2d, epsilon: %f"%(i_episode, agent.interaction_steps, episode_reward, agent.epsilon)
                 print(train_info_str)
-                log_fd.write(train_info_str)
+                log_fd.write(train_info_str+'\n')
                 break
 
         if i_episode % save_model_per_ep == 0:
@@ -86,7 +86,7 @@ def train():
                 episode_reward += reward
             eval_info_str = "Evaluation: True, Episode: %6d, Interaction_steps: %6d, evaluate reward: %2d"%(i_episode, agent.interaction_steps, episode_reward)
             print(eval_info_str)
-            log_fd.write(eval_info_str)
+            log_fd.write(eval_info_str+'\n')
     
     log_fd.close()
 
